@@ -1,6 +1,6 @@
 {
   "name": "bfx-api-node-plugin-managed-ob",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Maintains complete local order books for the Bitfinex Node API",
   "engines": {
     "node": ">=7"
