@@ -2,9 +2,14 @@
 
 [![Build Status](https://travis-ci.org/bitfinexcom/bfx-api-node-plugin-managed-ob.svg?branch=master)](https://travis-ci.org/bitfinexcom/bfx-api-node-plugin-managed-ob)
 
-This plugin maintains an internal `OrderBook` model and keeps it up to date with incoming ws2 data packets. On each update, a `data:managed:book` event is emitted on the socket, providing a complete `OrderBook` model instance (from `bfx-api-node-models`).
+This plugin maintains an internal `OrderBook` model and keeps it up to date
+with incoming ws2 data packets. On each update, a `data:managed:book` event is
+emitted on the socket, providing a complete `OrderBook` model instance (from
+`bfx-api-node-models`).
 
-Note that the manager proxies the event as `managed:book`. If subscribing on a socket instance (`wsState.ev.on(...)`) use the internal event name, otherwise use the manager name with `manager.onWS(...)`.
+Note that the manager proxies the event as `managed:book`. If subscribing on a
+socket instance (`wsState.ev.on(...)`) use the internal event name, otherwise
+use the manager name with `manager.onWS(...)`.
 
 ### Features
 
@@ -36,9 +41,11 @@ mgr.onWS('managed:book', {}, (ob) => {
 
 ### Docs
 
-For an executable example, [see `examples/usage.js`](/examples/usage.js)
+API documentation can be found in [`docs/reference.md`](docs/reference.md), and
+examples in the [`examples`](examples) folder.
 
 ### Example
+
 ```js
 const debug = require('debug')('bfx:api:plugins:managed-ob:example')
 const { Manager, subscribe } = require('bfx-api-node-core')

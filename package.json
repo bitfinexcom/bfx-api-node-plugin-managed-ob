@@ -1,15 +1,16 @@
 {
   "name": "bfx-api-node-plugin-managed-ob",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Maintains complete local order books for the Bitfinex Node API",
   "engines": {
-    "node": ">=7"
+    "node": ">=8.3.0"
   },
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
+    "lint": "./node_modules/.bin/eslint lib/ examples/ test/ index.js",
     "test": "npm run lint && npm run unit",
-    "unit": "NODE_ENV=test mocha -b --recursive"
+    "unit": "NODE_ENV=test mocha -b --recursive",
+    "docs": "rm -rf docs/*.md && ./node_modules/.bin/jsdoc2md -f index.js 'lib/**/*.js' > docs/reference.md"
   },
   "repository": {
     "type": "git",
@@ -38,9 +39,17 @@
     "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
-    "mocha": "^6.2.0",
-    "standard": "^14.1.0"
+    "eslint": "^7.2.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsdoc": "^27.0.4",
+    "eslint-plugin-lodash": "^7.1.0",
+    "eslint-plugin-mocha": "^7.0.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jsdoc-to-markdown": "^6.0.1",
+    "mocha": "^7.2.0"
   }
 }
