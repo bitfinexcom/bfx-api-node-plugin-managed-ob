@@ -1,3 +1,6 @@
+# 1.0.3
+- fix: fixed handling empty arrays on batch ob update
+
 # 1.0.2
 - docs: create/update
 
