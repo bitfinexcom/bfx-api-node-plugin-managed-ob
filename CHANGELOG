@@ -1,3 +1,6 @@
+#1.0.4
+- fix: update existing OrderBook from snapshot on resubscription
+
 # 1.0.3
 - fix: fixed handling empty arrays on batch ob update
 
@@ -13,4 +16,3 @@
 
 # 1.0.0
 - Initial version
-
